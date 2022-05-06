@@ -4,9 +4,9 @@ using namespace std;
 
 class Foo
 {
-	int value;
-
 public:
+	int value;
+	
 	Foo (int a)
 	{
 		value = a;
