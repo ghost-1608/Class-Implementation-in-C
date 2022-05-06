@@ -16,10 +16,10 @@ struct Foo
 
 // Define the "class method" (void display). Accepts the struct pointer to access the elements
 // Since this is the last "class method", the struct pointer needs to be freed in this function
-void display(struct Foo* s)
+void display(struct Foo* this)
 {
-	printf("%d", s->value);
-	free(s);
+	printf("%d", this->value);
+	free(this);
 }
 
 // Function created to emulate behaviour of a class constructor, accepts int
