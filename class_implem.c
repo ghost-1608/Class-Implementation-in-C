@@ -14,7 +14,7 @@ struct Foo
 	void (*display)(struct Foo*);
 };
 
-// Define the "class method" (void display). Function accepts the struct pointer to access the elements
+// Define the "class method" (void display). Accepts the struct pointer to access the elements
 // Since this is the last "class method", the struct pointer needs to be freed in this function
 void display(struct Foo* s)
 {
@@ -22,7 +22,7 @@ void display(struct Foo* s)
 	free(s);
 }
 
-// Function created to emulate behaviour of a class constructor
+// Function created to emulate behaviour of a class constructor, accepts int
 // Important as it maps the 'display' function pointer to the 'display' void function just created
 struct Foo* Foo(int a)
 {
