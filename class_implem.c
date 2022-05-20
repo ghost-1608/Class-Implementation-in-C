@@ -34,5 +34,5 @@ int main()
 {
 	struct Foo* f = Foo(69);	// Create struct Foo variable f and call the "constructor" (struct Foo* function) Foo()
 
-	(*(f->display))(f);	// De-references the 'display' member of the struct pointer 'f', then passes 'f' as a parameter
+	*(f->display)(f);	// De-references the 'display' member of the struct pointer 'f', then passes 'f' as a parameter
 }
