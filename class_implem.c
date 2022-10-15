@@ -26,7 +26,7 @@ struct Foo* Foo(int a)
 {
 	struct Foo* f = (struct Foo*) malloc(sizeof(struct Foo));
 	f->value = a;
-	f->display = &display;
+	f->display = display;
 	return f;
 }
 
@@ -34,5 +34,5 @@ int main()
 {
 	struct Foo* f = Foo(69);	// Create struct Foo variable f and call the "constructor" (struct Foo* function) Foo()
 
-	(*(f->display))(f);	// De-references the 'display' member of the struct pointer 'f', then passes 'f' as a parameter
+	f->display(f);	// Calling display with f as an argument
 }
